@@ -1,0 +1,14 @@
+{% if articles is not empty %}
+    <ul class="search-results">
+        {% for article in articles %}
+            <li>
+                <a href="{{ article.link }}">
+                    <h4>{{ article.title }}</h4>
+                    {% include "components/tags-list.html.twig" with {"tags": article.tags} %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    No results found!
+{% endif %}

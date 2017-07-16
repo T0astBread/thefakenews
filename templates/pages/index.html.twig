@@ -1,0 +1,10 @@
+{% extends "page-with-ads.html.twig" %}
+
+{% set styles = ["article-showcase"] %}
+
+{% block content %}
+    <section id="recent">
+        <h2>Recent Articles</h2>
+        {% include "components/article-showcase.html.twig" with {"articles": recentArticles} %}
+    </section>
+{% endblock %}

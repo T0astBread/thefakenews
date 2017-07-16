@@ -1,0 +1,15 @@
+{% extends "frame.html.twig" %}
+
+{% set styles = styles|merge(["adverts"]) %}
+
+{% block body %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <aside class="right-col">
+        <section class="adverts">
+            {{ ad|raw }}
+        </section>
+    </aside>
+{% endblock %}

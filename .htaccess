@@ -1,0 +1,9 @@
+#<Files "*.internal.*">
+#    Deny from all
+#</Files>
+#<Files "*.twig">
+#    Deny from all
+#</Files>
+
+#RewriteEngine on
+#RewriteRule .*\.twig /

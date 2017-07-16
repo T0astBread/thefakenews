@@ -1,0 +1,10 @@
+<ul class="article-list-showcase">
+    {% for article in articles %}
+        <li>
+            <a href="{{ article.link }}">
+                <h4>{{ article.title }}</h4>
+                <p>{{ article.textPreview }}</p>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

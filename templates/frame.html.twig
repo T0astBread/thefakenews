@@ -1,0 +1,46 @@
+{% set HOST = constant("HOST") %}
+{% set styles = styles|merge(["frame", "search-results"]) %}
+{% set scripts = (scripts is defined ? scripts : [])|merge(["search"]) %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <meta charset="UTF-8">
+            <title>{{ title is defined ? title~" - " }}The Fake News</title>
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+            {% for style in styles %}
+                <link rel="stylesheet" href="{{ HOST }}styles/{{ style }}.css">
+            {% endfor %}
+            <script type="text/javascript">window.host = "{{ HOST }}"</script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            {% for script in scripts %}
+                <script src="{{ HOST }}scripts/{{ script }}.js"></script>
+            {% endfor %}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <div id="header-line">
+                <h1><a href="{{ HOST }}">TFN</a></h1>
+                <form action="{{ HOST }}php/search.php" id="search" target="search-results-holder" method="get">
+                    <input type="text" id="search-input" name="query" placeholder="Search...">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+            <small>The Fake News</small>
+            <div id="search-results-presentation">
+                <h2>Results</h2>
+                <div id="search-results-holder"></div>
+                <noscript>
+                    <iframe id="search-results-holder-alt" name="search-results-holder"></iframe>
+                    <div id="search-js-info">Activate JavaScript to use this search field properly.</div>
+                </noscript>
+            </div>
+        </header>
+        <section id="main-body">
+            {% block body %}
+            {% endblock %}
+        </section>
+    </body>
+</html>

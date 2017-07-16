@@ -1,0 +1,152 @@
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header *
+{
+    box-sizing: border-box;
+}
+
+header, #header-line, header small
+{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+#header-line, header small
+{
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: "Times New Roman", serif;
+}
+
+#header-line
+{
+    background-color: #939393;
+    padding-top: .1em;
+    font-weight: bold;
+    position: relative;
+}
+
+#header-line *
+{
+    display: inline-block;
+}
+
+#header-line h1
+{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 48pt;
+}
+
+#header-line h1 a
+{
+    text-decoration: none;
+    color: black;
+}
+
+header small
+{
+    font-size: 15pt;
+    background-color: #ccc;
+}
+
+#search
+{
+    position: absolute;
+    bottom: .8em;
+    right: 40px;
+}
+
+#search *
+{
+    vertical-align: bottom;
+}
+
+#search-results-presentation
+{
+    display: none;
+    position: absolute;
+    right: 40px;
+    width: 20em;
+    height: 30em;
+    background-color: white;
+    box-shadow: 0 0 15px black;
+    padding: 1em;
+    z-index: 10;
+}
+
+#search-results-presentation h2
+{
+    padding: 0;
+    margin: 0;
+    margin-bottom: .75em;
+    font-size: 18pt;
+}
+
+#search-results-holder
+{
+    max-height: 25em;
+    overflow-y: auto;
+}
+
+#search-results-holder-alt
+{
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: red;
+    width: 100%;
+}
+
+#search-js-info
+{
+    position: absolute;
+    bottom: 0;
+    font-size: 10pt;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+#main-body
+{
+    margin: 2em;
+}
+
+main
+{
+    /*padding-left: 4em;*/
+    padding-right: 2em;
+    box-sizing: border-box;
+    width: 89%;
+    display: inline-block;
+}
+
+h2
+{
+    font-size: 32pt;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+aside.right-col
+{
+    display: inline-block;
+    width: 10%;
+    height: 30em;
+    vertical-align: top;
+}
