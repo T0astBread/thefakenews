@@ -15,6 +15,7 @@
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 
+
 #PHP .gitignore
 # Composer:
 vendor/
@@ -22,3 +23,7 @@ composer.phar
 
 # Other sensitive information:
 *.sensitive.*
+
+
+# TYPESCRIPT .gitignore
+scripts/*.js
